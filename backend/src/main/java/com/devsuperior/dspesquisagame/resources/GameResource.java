@@ -15,8 +15,6 @@ import com.devsuperior.dspesquisagame.repositories.GameRepository;
 @RequestMapping(value = "/games")
 public class GameResource {
 	
-	@Autowired
-	private GameRepository gameRepository;
 	
 	@GetMapping
 	public ResponseEntity<List<Game>> findAll(){
