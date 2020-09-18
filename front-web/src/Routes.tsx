@@ -14,6 +14,9 @@ import Records from './pages/Records';
             <Route path="/records" exact> 
                 <Records />
             </Route>
+            <Route path="/charts" exact> 
+                <h1>charts</h1>
+            </Route>
         </Switch>
     </BrowserRouter>
  )
