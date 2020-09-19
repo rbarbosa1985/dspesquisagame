@@ -1,12 +1,29 @@
-import React from 'react';
-import {Text, StyleSheet, View, Image, Alert} from 'react-native';
+import React, { useState } from 'react';
+import {Text, StyleSheet, TextInput, View, Image, Alert} from 'react-native';
 import Header from '../../components/Header';
+import PlatformCard from './PlatformCard';
+import { GamePlatform } from './types';
 
 const CreateRecord = () => {
+
+    const [platform, setPlatform] = useState<GamePlatform>();
+
+    const handleChangePlatform = (selectedPlatform: GamePlatform) => {
+        setPlatform(selectedPlatform);
+    };
+
     return (
         <>
             <Header/>
-            <Text>Hello create-record!</Text>
+            <View style={styles.container}>
+                <TextInput style={styles.inputText} placeholder="Nome" placeholderTextColor="#9E9E9E"/>
+                <TextInput style={styles.inputText} placeholder="Idade" placeholderTextColor="#9E9E9E" keyboardType="numeric" maxLength={2}/>
+            </View>
+            <View style={styles.platformContainer}>
+                <PlatformCard platform="PC" icon="laptop" onChange={() => handleChangePlatform} activePlatform={platform} />
+                <PlatformCard platform="XBOX" icon="xbox" onChange={() => handleChangePlatform} activePlatform={platform}/>
+                <PlatformCard platform="PLAYSTATION" icon="playstation" onChange={() => handleChangePlatform} activePlatform={platform}/>
+            </View>
         </>
     );
 };
