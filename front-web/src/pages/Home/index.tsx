@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReactComponent as Arrow } from '../../assets/arrow.svg';
 import { ReactComponent as Gamer } from '../../assets/gamer.svg';
-import { ReactComponent as Wave } from '../../assets/wave.svg';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
