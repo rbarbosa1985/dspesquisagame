@@ -48,7 +48,7 @@
   }
   
   /* responsive */
-  /*
+  
   @media (max-width: 1250px) {
     .home-image {
       max-width: 400px;
@@ -64,4 +64,5 @@
   
     .home-text-title {
       font-size: 45px;
-    }*/
+    }
+  }
